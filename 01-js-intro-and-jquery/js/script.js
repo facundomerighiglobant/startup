@@ -53,7 +53,7 @@ $(document).ready(function() {
         "</a></li>"
         );
     }
-    if($("#sidebar #albums article ul").children().length == 0) alert("Artist not found");
+    if(!$("#sidebar #albums article ul").children().length) alert("Artist not found");
   }
 
   function performAjaxQuery(_url, _type, _data, successAction, errorAction) {
