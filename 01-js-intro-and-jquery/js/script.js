@@ -75,13 +75,12 @@ $(document).ready(function() {
 
   }
 
-
   function welcomeError() {
     $welcome_sct.children().css("color","red");
   }
 
   function performGreeting(val) {
-    $("#label").text(val["response"]);
+    $("#label").text(val.response);
     $welcome_sct.children().css("color","black");
     highlight(name, "label");
     $(".alias").val("");
