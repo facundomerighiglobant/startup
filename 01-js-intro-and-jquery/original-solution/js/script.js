@@ -49,7 +49,7 @@ $(document).ready(function() {
         "<li><p class='album-names'>" + albums[i].name + "</p>" + 
         "<p>" + albums[i].album_type + "</p>" + 
         "<a href='" + albums[i].external_urls.spotify + "'>" +  
-        "<img src='" + albums[i].images[2].url + "'>" + 
+        "<img src='" + albums[i].images[1].url + "'>" + 
         "</a></li>"
         );
     }
