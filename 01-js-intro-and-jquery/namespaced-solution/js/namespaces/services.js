@@ -1,6 +1,7 @@
-var ajax = ajax || {};
+var myApp = myApp || {};
+myApp.services = myApp.services || {};
 
-ajax.performQuery = function(_url, _type, _data, successAction, errorAction) {
+myApp.services.performQuery = function(_url, _type, _data, successAction, errorAction) {
   $.ajax({
     type: _type,
     url: _url,

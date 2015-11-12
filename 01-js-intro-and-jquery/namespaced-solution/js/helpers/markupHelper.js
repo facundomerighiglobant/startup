@@ -1,8 +1,8 @@
-var markupHelper = markupHelper || {};
-var spotify = spotify || {};
-spotify.markupHelper = spotify.markupHelper || {};
+var myApp = myApp || {};
+myApp.services = myApp.services || {};
+myApp.services.markupHelper = myApp.services.markupHelper || {};
 
-spotify.markupHelper.AlbumMarkup = function(album) {
+myApp.services.markupHelper.AlbumMarkup = function(album) {
   this.name = album.name;
   this.album_type = album.album_type;
   this.external_urls = album.external_urls;
@@ -16,7 +16,7 @@ spotify.markupHelper.AlbumMarkup = function(album) {
   };
 }
 
-markupHelper.highlight = function(id) {
+myApp.services.markupHelper.highlight = function(id) {
   name = $(".alias").val();
   var newHtml = document.getElementById(id)
   .innerHTML.replace(name, '<span class="highlight">' + name + '</span>');

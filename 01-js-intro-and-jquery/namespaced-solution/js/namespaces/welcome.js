@@ -1,22 +1,26 @@
-var welcome = welcome || {};
-var ajax = ajax || {};
-var markupHelper = markupHelper || {};
+var myApp = myApp || {};
+myApp.welcome = myApp.welcome || {};
+myApp.services = myApp.services || {};
+myApp.services.markupHelper = myApp.services.markupHelper || {};
 
-$("#welcome-btn").click(function() {
-  ajax.performQuery("http://bootcamp.aws.af.cm/welcome/" + $(".alias").val(), 
-    "GET", 
-    null,
-    welcome.performGreeting, 
-    welcome.error);
-});
-
-welcome.error = function() {
+myApp.welcome.error = function() {
   $("#welcome-section").children().css("color","red");
 }
 
-welcome.performGreeting = function(val) {
+myApp.welcome.performGreeting = function(val) {
   $("#label").text(val.response);
   $("#welcome-section").children().css("color","black");
-  markupHelper.highlight("label");
+  myApp.services.markupHelper.highlight("label");
   $(".alias").val("");
 }
+
+myApp.welcome.loadListeners = function() {
+  $("#welcome-btn").click(function() {
+    myApp.services.performQuery("http://bootcamp.aws.af.cm/welcome/" + $(".alias").val(), 
+      "GET", 
+      null,
+      myApp.welcome.performGreeting, 
+      myApp.welcome.error
+      );
+  });
+}();
