@@ -1,0 +1,69 @@
+body {
+  font-family: helvetica;
+}
+
+h1, 
+#sidebar *,
+#welcome-group,
+#albums-search {
+  text-align: center;
+}
+
+h1 {
+  line-height: 10vh;
+  height: 10vh;
+  vertical-align: middle;
+  margin: auto;
+  border-bottom: solid;
+}
+
+#search-btn {
+  margin: 1em auto;
+  display: block;
+}
+
+#albums-search input {
+  margin-top: 3em;
+}
+
+#welcome-group, 
+#albums-search {
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+.alias {
+  text-align: left;
+}
+
+#welcome-section, 
+.alias, 
+#welcome-btn {
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+#welcome-section {
+  opacity: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.album-names {
+  font-weight: bold;
+}
+
+#sidebar {
+  margin: 0 auto;
+  height: 88.5vh;
+  overflow: auto;
+  border-left: solid;
+  border-bottom: solid;
+  float: right;
+  width: 49%;
+}
+
